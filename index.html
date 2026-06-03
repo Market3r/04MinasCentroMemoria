@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<title>Projeto Sal&#227;o de Festas Minas 1 - edif&#237;cio Sede</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta property="og:title" content="Projeto Sal&#227;o de Festas Minas 1 - edif&#237;cio Sede">
+		<meta property="og:description" content="Conhe&#231;a cada detalhe do sal&#227;o de festas para alugar no Minas T&#234;nis Clube unidade 1, no edif&#237;cio da sede social (R. da Bahia, 2244, bairro Lourdes, Belo Horizonte)  atrav&#233;s do nosso tour virtual 360&#176;, uma experi&#234;ncia interativa que permite visitar o espa&#231;o como se voc&#234; estivesse no local. Ideal para anivers&#225;rios, casamentos, festas de 15 anos, eventos corporativos e confraterniza&#231;&#245;es, o tour facilita a escolha do ambiente perfeito para o seu evento.
+
+Com o tour virtual do sal&#227;o de festas, voc&#234; pode visualizar a &#225;rea interna, sal&#245;es, cozinha, ilumina&#231;&#227;o, palco, acessibilidade e capacidade do local, tudo de forma pr&#225;tica, r&#225;pida e sem sair de casa. Essa tecnologia garante mais seguran&#231;a na decis&#227;o e otimiza o tempo de quem busca aluguel de sal&#227;o de festas com qualidade e estrutura completa.
+
+O espa&#231;o foi projetado para oferecer conforto, modernidade, versatilidade e sofistica&#231;&#227;o, atendendo diferentes tipos de eventos e necessidades. Ao navegar pelo tour, voc&#234; tem uma vis&#227;o realista do ambiente, o que torna o processo de loca&#231;&#227;o mais transparente, pr&#225;tico e confi&#225;vel.
+
+&#55357;&#56393; Agende seu evento conosco e confira por que este &#233; o sal&#227;o de festas ideal para o seu evento.">
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta property="og:image" content="preview.jpg">
+		<style type="text/css" title="Default">
+			/* fullscreen */
+			html {
+				height:100%;
+			}
+			body {
+				height:100%;
+				margin: 0px;
+				background: black;
+				color: white;
+				overflow:hidden; /* disable scrollbars */
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
+			}
+			/* fix for scroll bars on webkit & >=Mac OS X Lion */
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+				height: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+				background-color:  rgba(255,255,255,0.5);
+			}
+		</style>
+	</head>
+	<body>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+		<script type="text/javascript" src="pano2vr_player.js?ts=48720440">
+		</script>
+		<script type="text/javascript" src="skin.js?ts=48720440">
+		</script>
+		<link rel="stylesheet" href="3rdparty/leaflet/leaflet.css"/>
+		<script src="3rdparty/leaflet/leaflet.js"></script>
+		<div id="container" style="width:100%;height:100%;overflow:hidden;">
+		<br>Loading...<br><br>
+		</div>
+		<script type="text/javascript">
+		function parseParams(paramsString, params) {
+			paramsString = paramsString.substring(1);
+			var firstSeparatorPos = paramsString.indexOf(",");
+			if (firstSeparatorPos != -1) {
+				params.startNode = paramsString.slice(0, firstSeparatorPos);
+				var viewingParamsString = paramsString.slice(firstSeparatorPos + 1);
+				var viewingParams = viewingParamsString.split(",");
+				if (viewingParams.length >= 3) {
+					var startView = {};
+					startView["pan"] = viewingParams[0];
+					startView["tilt"] = viewingParams[1];
+					startView["fov"] = viewingParams[2];
+					if (viewingParams.length >= 4) {
+						startView["projection"] = viewingParams[3];
+					}
+					params.startView = startView;
+				}
+			} else {
+				params.startNode = paramsString;
+				params.startView = "";
+			}
+		}
+		var params = {};
+		parseParams(document.location.hash, params);
+		var startNode = params.startNode;
+		var startView = params.startView;
+		if (("onhashchange" in window) && (!(/MSIE (\d+\.\d+);/.test(navigator.userAgent)))) {
+			window.onhashchange = function () {
+				parseParams(window.location.hash, params);
+				pano.openNext('{' + params.startNode + '}', params.startView);
+			}
+		} else {
+			var lastHash = window.location.hash;
+			window.setInterval(function () {
+				if (window.location.hash != lastHash) {
+					lastHash = window.location.hash;
+					parseParams(window.location.hash, params);
+					pano.openNext('{' + params.startNode + '}', params.startView);
+				}
+			}, 100);
+		}
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+			pano.startNode = startNode;
+			pano.startView = startView;
+			pano.setQueryParameter("ts=48720440")
+			// add the skin object
+			skin=new pano2vrSkin(pano);
+			// load the configuration
+			window.addEventListener("load", function() {
+				pano.readConfigUrlAsync("pano.xml?ts=48720440");
+			});
+			if (window.navigator.userAgent.match(/Safari/i)) {
+				// fix for white borders, rotation on iPhone
+				function iosHfix(e) {
+					window.scrollTo(0, 1);
+					var container=document.getElementById("container");
+					var oh=container.offsetHeight;
+					document.documentElement.style.setProperty('height', '100vh');
+					if (oh!=container.offsetHeight) {
+						container.style.setProperty('height',"100%");
+					} else {
+						container.style.setProperty('height',window.innerHeight+"px");
+					}
+					window.scrollTo(0, 0);
+					pano.setViewerSize(container.offsetWidth, container.offsetHeight);
+				};
+				setTimeout(iosHfix,0);
+				setTimeout(iosHfix,100);
+				window.addEventListener("resize", function() {
+					setTimeout(iosHfix,0);
+					// hide toolbar on iPad happens with a delay
+					setTimeout(iosHfix,500);
+					setTimeout(iosHfix,1000);
+					setTimeout(iosHfix,2000);
+				});
+			}
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+	</body>
+</html>
