@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.11/21010
 // Filename: centro de mem�ria MTC1.ggsk
-// Generated 2026-07-13T11:09:42
+// Generated 2026-07-13T17:47:22
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnails', 2, false, { ignoreInState: 0  });
@@ -510,7 +510,7 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._button_wpp.onclick=function (e) {
-			player.openUrl("https:\/\/wa.me\/553135161332","_blank");
+			player.openUrl("https:\/\/wa.me\/5531999999999","_blank");
 		}
 		me._button_wpp.onmouseenter=function (e) {
 			me._button_wpp__img.style.visibility='hidden';
@@ -602,7 +602,7 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._button_twitter.onclick=function (e) {
-			player.openUrl("https:\/\/www.instagram.com\/minastenisclube\/","_blank");
+			player.openUrl("https:\/\/www.instagram.com\/mtccultura?igsh=MXE3bnA3dnpzamI4eg==","_blank");
 		}
 		me._button_twitter.onmouseenter=function (e) {
 			me._button_twitter__img.style.visibility='hidden';
