@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.11/21010
 // Filename: centro de mem�ria MTC1.ggsk
-// Generated 2026-07-13T17:47:22
+// Generated 2026-07-13T18:34:53
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnails', 2, false, { ignoreInState: 0  });
@@ -1150,7 +1150,7 @@ function pano2vrSkin(player,base) {
 		els.setAttribute('style',hs);
 		me._text_2.ggUpdateText=function() {
 			var params = [];
-			var hs = player._("CENTRO DE MEM\xd3RIA MINAS T\xcaNIS CLUBE\n\n\ud83d\udccd Rua da Bahia, n.\xba 2244 - Lourdes - Belo Horizonte\n\n\ud83c\udfc6 Acervo: 50 mil itens, dos quais tr\xeas mil est\xe3o expostos.\n\n\ud83d\udd58 Visita\xe7\xe3o: De ter\xe7a a s\xe1bado, das 10h \xe0s 20h. Domingos e feriados, das 11h \xe0s 19h.\n\n\u2705 Aberto ao p\xfablico externo.", params);
+			var hs = player._("CENTRO DE MEM\xd3RIA MINAS T\xcaNIS CLUBE\n\n\ud83d\udccd Rua da Bahia, n.\xba 2244 - Lourdes - Belo Horizonte\n\n\ud83c\udfc6 Acervo: 50 mil itens, dos quais tr\xeas mil est\xe3o expostos.\n\n\ud83d\udd58 Visita\xe7\xe3o: De ter\xe7a a s\xe1bado, das 10h \xe0s 20h. Domingos e feriados, das 11h \xe0s 19h.\n\n\u2705 Aberto ao p\xfablico externo.\n\n\ud83d\udcde Contatos: 3516-1000 \/ 3516-2000 \/ 3516-1000", params);
 			if (hs!=this.ggText) {
 				this.ggText=hs;
 				this.ggTextDiv.innerHTML=hs;

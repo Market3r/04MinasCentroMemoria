@@ -886,7 +886,7 @@
       <polyhotspot url="" id="Poly07" title="" target="_blank" description="Hide">
         <polystring>-253.88/1.08|-290.81/2.86|-290.72/-13.43|-291.34/-14.88|-278.36/-15.04|-278.94/-6.34|-253.23/-4.87</polystring>
       </polyhotspot>
-      <polyhotspot url="{node56}" id="Poly08" title="Galeria 2 vista 1" target="-156.6/-2.9/100.0" description="Show">
+      <polyhotspot url="{node56}" id="Poly08" title="" target="-156.6/-2.9/100.0" description="Show">
         <polystring>-291.95/-3.57|-313.18/-3.97|-312.38/-18.67|-327.4/-23.61|-307.15/-36.22|-280.35/-16.85|-291.87/-15.47</polystring>
       </polyhotspot>
       <polyhotspot url="" id="Poly09" title="" target="_blank" description="Hide">
@@ -2246,7 +2246,7 @@
       <polyhotspot url="" id="Poly04" title="" target="_blank" description="Hide">
         <polystring>-313.11/-2.51|-314.25/-25.08|-216.63/-21.01|-217.05/-2.75</polystring>
       </polyhotspot>
-      <polyhotspot url="{node54}" id="Poly05" title="Galeria 2 vista 3" target="-177.2/-1.0/157.2" description="Show">
+      <polyhotspot url="{node54}" id="Poly05" title="" target="-177.2/-1.0/157.2" description="Show">
         <polystring>-186.71/-3.7|-194.1/-8.39|-166.01/-8.1|-173.24/-3.63</polystring>
       </polyhotspot>
       <polyhotspot url="" id="Poly06" title="" target="_blank" description="Hide">
